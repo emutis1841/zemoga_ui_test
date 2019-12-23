@@ -1,0 +1,8 @@
+header.header
+    nav
+        h2=data.header.thumb
+        ul.header-links
+            each val in data.header.links
+                li
+                    a(href=val.title)=val.title
+        img(src="/images/icons/magnifying-glass.svg", alt="Search icon")
