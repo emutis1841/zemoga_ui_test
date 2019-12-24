@@ -1,0 +1,15 @@
+%gradient {
+    background: $color-gray-20;
+    background: linear-gradient(180deg, rgba(51,51,51,0.9) 0%, rgba(51,51,51,0) 80%);
+}
+
+%gradient-reverse {
+    background: $color-gray-20;
+    background: linear-gradient(0deg, rgba(51,51,51,0.9) 0%, rgba(51,51,51,0) 100%);
+}
+
+%background-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

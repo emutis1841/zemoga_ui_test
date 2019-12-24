@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var sassMiddleware = require('node-sass-middleware');
+var browserify = require('browserify-middleware');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,6 +14,32 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+app.use(
+  sassMiddleware({
+    src:__dirname + '/sass',
+    dest: __dirname + '/public',
+    debug: true
+  })
+)
+
+app.get(
+  '/javascripts/bundle.js',
+  browserify('./client/script.js')
+);
+
+if (app.get('env') == 'development') {
+  var browserSync = require('browser-sync');
+  var config = {
+    files: ["public/**/*.{js,css}", "client/*.js", "sass/**/*.scss", "views/**/*.jade"],
+    logLevel: 'debug',
+    logSnippet: false,
+    reloadDelay: 3000,
+    reloadOnRestart: true
+  };
+  var bs = browserSync(config);
+  app.use(require('connect-browser-sync')(bs));
+}
 
 app.use(logger('dev'));
 app.use(express.json());

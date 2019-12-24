@@ -1,0 +1,32 @@
+@import 'lib/colors';
+@import 'lib/fonts';
+@import 'lib/mixins';
+@import 'lib/animations';
+@import 'lib/utilities';
+@import 'lib/sizes';
+
+@import 'base/buttons';
+@import 'base/links';
+
+@import 'components/header/header';
+@import 'components/section/section';
+@import 'components/footer/footer';
+/*
+//COMPONENTS
+@import 'components/loader';
+@import 'components/splash';
+@import 'components/logo';
+@import 'components/nav';
+@import 'components/landing';
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+

@@ -1,0 +1,10 @@
+footer.footer-container
+    .footer-links
+        ul
+            each val in data.footer.links
+                li
+                    a(href=val.title)=val.title
+    .social-icons
+        span Follow Us
+        img(src='/images/icons/facebook.svg', alt="Facebook icon")
+        img(src='/images/icons/twitter.svg', alt="Twitter icon")

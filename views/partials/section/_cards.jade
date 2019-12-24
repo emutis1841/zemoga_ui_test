@@ -1,0 +1,13 @@
+.cards-container
+        each val in data.homepage.cards
+            .cards-container-card(style="background-image: url("+ val.image +")")
+                .cards-container-card-gradient
+                .cards-container-card-information
+                    h2.card-name-title=val.name
+                    p.card-description=val.description
+                    .card-vote
+                        .card-vote-button View Full Report
+                        .card-vote-time-container
+                            span.card-vote-time=val.time
+                            span.card-vote-section=val.section
+                include ../thumb/_thumbContainer.jade

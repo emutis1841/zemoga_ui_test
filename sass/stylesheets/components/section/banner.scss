@@ -1,0 +1,58 @@
+.banner-container {
+    background-image: url('../images/people/footer.jpg');
+    @extend %background-card;
+    position: relative;
+    margin-top: 60px;
+
+    &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        background-color: $color-white-rgba-dark;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+    }
+
+    &-content {
+        position: relative;
+        z-index: 90;
+        padding: 20px;
+
+        p {
+            color: $color-gray-20;
+            font-size: $font-size-medium;
+            text-align: center;
+            padding: 15px;
+        }
+    }
+
+    &-button {
+        width: 50%;
+        border: 2px solid $color-gray-20;
+        text-align: center;
+        padding: 15px;
+        margin: 0 auto;
+        font-size: $font-size-small;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+@include is-desktop() {
+    .banner-container {
+        &-content {
+            display: flex;
+
+            p {
+                width: 80%;
+                font-size: 30px;
+                text-align: start;
+            }
+        }
+
+        &-button {
+            width: 20%;
+        }
+    }
+}

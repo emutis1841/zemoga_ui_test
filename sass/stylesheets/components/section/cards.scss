@@ -1,0 +1,116 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 60px 0;
+
+    &-card {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+        position: relative;
+
+        &-gradient::after {
+            content: ' ';
+            display: block;
+            position: absolute;
+            @extend %gradient-reverse;
+            height: 100%;
+            width: 100%;
+            bottom: 0;
+        }
+
+        &-information {
+            color: $color-white;
+            position: absolute;
+            bottom: 40px;
+            padding: 0 20px 60px 70px;
+
+            .card {
+                &-name-title {
+                    font-size: $font-size-medium;
+                    text-transform: capitalize;
+                }
+
+                &-description {
+                    margin-top: 10px;
+                    font-size: $font-size-small;
+                }
+
+                &-vote {
+                    margin-top: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &-button {
+                        padding: 10px 15px;
+                        border: 2px solid $color-white;
+                        cursor: pointer;
+                        width: 50%;
+                        text-align: center;
+                        margin-bottom: 15px;
+                    }
+
+                    &-time {
+                        font-size: $font-size-text;
+                    }
+
+                    &-section {
+                        font-size: $font-size-extra-small;
+                        font-weight: 300;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-thumb-container {
+        position: absolute;
+        bottom: 0;
+        height: 60px;
+
+        .thumbs-up,
+        .thumbs-down {
+            padding: 13px;
+        }
+    }
+}
+
+
+@include is-desktop() {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+
+        &-card-information {
+            .card-vote {
+                justify-content: space-between;
+                flex-direction: row;
+                margin-top: 30px;
+
+                &-button {
+                    margin: 0;
+                    width: 40%;
+                    font-size: $font-size-text;
+                }
+
+                &-time {
+                    font-size: $font-size-small;
+                    font-weight: 700;
+                }
+
+                &-section {
+                    font-size: $font-size-text;
+                    margin-left: 5px;
+                }
+
+                &-time-container span {
+                    display: block;
+                }
+            }
+
+        }
+    }
+}

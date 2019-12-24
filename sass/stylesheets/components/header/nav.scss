@@ -1,0 +1,70 @@
+nav {
+    @extend %gradient;
+    color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    line-height: $height;
+    height: $height;
+
+    h2 {
+        display: none;
+    }
+
+    .header-hidden {
+        &-desktop {
+            background-color: $color-gray;
+            height: 100vh;
+            position: fixed;
+            width:100%;
+            order: 1;
+            transform: translateX(-100%);
+            transition: all .3s;
+            z-index: 1000;
+
+            &.open {
+                transform: translateX(0);
+            }
+        }
+
+        &-mobile {
+            display: none;
+        }
+    }
+
+    img {
+        width: $size-30;
+        height: $size-30;
+        margin: 15px;
+    }
+}
+
+@include is-desktop() {
+
+    .header .header-card {
+        margin: 40px 120px 70px 130px;
+    }
+    nav {
+        padding: 40px 120px 70px 130px;
+        line-height: inherit;
+        height: 100px;
+
+        h2 {
+            display: block;
+            font-size: $font-size-large;
+            font-weight: 500;
+            line-height: 25px;
+        }
+
+        .header-hidden-mobile {
+            display: block;
+        }
+
+        .header-hidden-desktop {
+            display: none;
+        }
+
+        img {
+            margin: 0;
+        }
+    }
+}

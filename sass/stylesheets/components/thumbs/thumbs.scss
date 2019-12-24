@@ -1,0 +1,27 @@
+.header-thumb-container {
+    width: 100%;
+    display: flex;
+}
+
+.thumbs {
+    &-up,
+    &-down {
+        width: 50%;
+        padding: 20px;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    &-up {
+        background-color: $color-light-sea-green;
+    }
+
+    &-down {
+        background-color: $color-dark-tangerine;
+    }
+}

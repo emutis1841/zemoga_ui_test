@@ -1,6 +1,6 @@
 var data = {
     "header": {
-        "thumb": "Rule of Thumb",
+        "thumb": "Rule of Thumb.",
         "links": [
             {
                 "href": "/",
@@ -19,24 +19,28 @@ var data = {
     "homepage": {
         "cards": [
             {
+                "image": "/images/people/kanye_west.jpg",
                 "name": "kanye west",
                 "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
                 "time": "1 month ago",
                 "section": "in Entertainment"
             },
             {
+                "image": "/images/people/mark.jpg",
                 "name": "mark zuckerberg",
                 "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
                 "time": "1 month ago",
                 "section": "in Business"
             },
             {
+                "image": "/images/people/cristina.jpg",
                 "name": "cristina fernández de kirchner",
                 "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
                 "time": "1 month ago",
                 "section": "in Politics"
             },
             {
+                "image": "/images/people/malala.jpg",
                 "name": "malala yousafzai",
                 "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
                 "time": "1 month ago",

@@ -1,0 +1,14 @@
+@import './tooltip.scss';
+@import './cards.scss';
+@import './banner.scss';
+
+.section-container {
+    width: 80%;
+    margin: 0 auto;
+
+    h1 {
+        font-size: $font-size-title;
+        font-weight: 300;
+        margin: 50px 0;
+    }
+}

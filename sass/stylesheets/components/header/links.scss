@@ -1,0 +1,44 @@
+
+.header-links a {
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.header-hidden {
+    &-desktop {
+        .header-links {
+            list-style: none;
+            margin-top: 60px;
+
+            li {
+                margin: 30px;
+
+                a {
+                    color: $color-gray-20;
+                    font-size: $font-size-large;
+                }
+            }
+        }
+    }
+
+    &-mobile {
+        .header-links {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                margin: 0 30px;
+                font-weight: 300;
+
+                a {
+                    color: $color-white;
+                    font-size: $font-size-normal;
+                }
+            }
+        }
+    }
+}

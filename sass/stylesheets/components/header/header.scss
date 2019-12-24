@@ -1,0 +1,29 @@
+@import './closeButton';
+@import './links';
+@import './nav.scss';
+@import './headerCard.scss';
+@import './headerCounter.scss';
+@import '../thumbs/thumbs.scss';
+
+header,
+.header-blur-bg {
+    background-image: url('/images/people/francisco_mobile.jpg');
+    @extend %background-card;
+}
+
+h4 {
+    margin-bottom: 35px;
+    padding: 0 30px;
+}
+
+
+@include is-desktop() {
+    header,
+    .header-blur-bg {
+        background-image: url('/images/people/francisco.jpg');
+    }
+
+    h4 {
+        font-size: $font-size-medium;
+    }
+}
