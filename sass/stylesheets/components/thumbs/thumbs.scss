@@ -6,8 +6,12 @@
 .thumbs {
     &-up,
     &-down {
-        width: 50%;
         padding: 20px;
+        cursor: pointer;
+
+        &.border {
+            border: 2px solid $color-white;
+        }
 
         img {
             display: block;
@@ -15,8 +19,11 @@
             width: 35px;
             height: 35px;
         }
-    }
 
+        span {
+            display: none;
+        }
+    }
     &-up {
         background-color: $color-light-sea-green;
     }

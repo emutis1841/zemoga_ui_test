@@ -33,6 +33,11 @@
             font-size: $font-size-medium;
             font-weight: 300;
         }
+
+        .thumbs-up,
+        .thumbs-down {
+            width: 50%;
+        }
     }
 
     &-card-title {

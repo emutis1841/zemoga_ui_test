@@ -4,10 +4,15 @@
                 .cards-container-card-gradient
                 .cards-container-card-information
                     h2.card-name-title=val.name
+                    .card-time-container
+                            span.card-time=val.time
+                            span.card-section=val.section
                     p.card-description=val.description
                     .card-vote
-                        .card-vote-button View Full Report
-                        .card-vote-time-container
-                            span.card-vote-time=val.time
-                            span.card-vote-section=val.section
-                include ../thumb/_thumbContainer.jade
+                        .card-vote-button.vote-now.disabled Vote Now
+                        .card-vote-button.vote-again.hide Vote Again
+                        .card-vote-thumbs
+                            include ../thumb/_thumbUp.jade
+                            include ../thumb/_thumbDown.jade
+                .cards-results.hide
+                    include ../thumb/_thumbContainer.jade
